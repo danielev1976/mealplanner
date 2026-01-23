@@ -1,0 +1,32 @@
+name: Deploy to Strato
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Strato
+        uses: jakejarvis/strato-deploy@v1.0.0
+        with:
+          server: ${{ secrets.STRATO_SERVER }}
+          username: ${{ secrets.STRATO_USERNAME }}
+          password: ${{ secrets.STRATO_PASSWORD }}
+          local-dir: '.next'
+          remote-dir: '/'  # Adjust the remote directory as needed
