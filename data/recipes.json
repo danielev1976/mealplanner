@@ -1,0 +1,9 @@
+[
+  {
+    "id": "uuid",
+    "title": "Pasta Carbonara",
+    "ingredients": ["Pasta", "Eggs", "Pancetta"],
+    "instructions": ["Cook the pasta","Mix everything"],
+    "createdAt": "2026-01-23"
+  }
+]
