@@ -23,10 +23,10 @@ jobs:
         run: npm run build
 
       - name: Deploy to Strato
-        uses: jakejarvis/strato-deploy@v1.0.0
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.STRATO_SERVER }}
+          host: ${{ secrets.STRATO_SERVER }}
           username: ${{ secrets.STRATO_USERNAME }}
           password: ${{ secrets.STRATO_PASSWORD }}
-          local-dir: '.next'
-          remote-dir: '/'  # Adjust the remote directory as needed
+          source: '.next/**'
+          target: '/'  # Adjust the remote directory as needed
