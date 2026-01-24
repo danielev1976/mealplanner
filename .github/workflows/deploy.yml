@@ -27,6 +27,7 @@ jobs:
         with:
           host: ${{ secrets.STRATO_SERVER }}
           username: ${{ secrets.STRATO_USERNAME }}
-          password: ${{ secrets.STRATO_PASSWORD }}
+          key: ${{ secrets.STRATO_SSH_KEY }}
+          port: 22
           source: '.next/**'
           target: '/'  # Adjust the remote directory as needed
