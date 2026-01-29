@@ -1,5 +1,8 @@
 import Image from 'next/image'
-export default function RecipeCard() {
+import {Recipe} from '@/app/types/recipe';
+
+
+export default function RecipeCard(recipe: Recipe) {
 
     return (
         <>
@@ -10,16 +13,24 @@ export default function RecipeCard() {
                     height={500}
                     alt="Picture of the author"
                 />  <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-                    <p className="text-gray-700 text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
+                    <div className="font-bold text-xl mb-2">{recipe.title}</div>
+                    
                 </div>
-                <div className="px-6 pt-4 pb-2">
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                </div>
+               <div className="p-4">
+     
+        <p className="text-sm text-amber-600 mb-3">
+          {recipe.ingredients.join(", ")}
+        </p>
+
+        <span className="text-sm text-gray-300 font-medium">
+          
+          <ol>
+            {recipe.instructions.map((step, index) => (
+              <li className='mb-3' key={index}>{step}</li>
+            ))}
+          </ol>
+        </span>
+      </div>
             </div>
         </>
     )

@@ -1,9 +1,172 @@
 [
   {
-    "id": "uuid",
-    "title": "Pasta Carbonara",
-    "ingredients": ["Pasta", "Eggs", "Pancetta"],
-    "instructions": ["Cook the pasta","Mix everything"],
-    "createdAt": "2026-01-23"
+    "title": "Kycklingpasta med ärtcrème och soltorkade tomater",
+    "ingredients": [
+      "pasta",
+      "kycklingfilé",
+      "frysta ärtor",
+      "crème fraiche",
+      "vitlök",
+      "soltorkade tomater",
+      "olivolja",
+      "salt",
+      "svartpeppar"
+    ],
+    "instructions": [
+      "Koka pastan enligt anvisningarna på förpackningen.",
+      "Mixa ärtor, crème fraiche och vitlök till en slät kräm.",
+      "Skär kycklingen i bitar och stek den i olivolja tills genomstekt.",
+      "Hacka de soltorkade tomaterna och tillsätt dem i pannan.",
+      "Blanda ner ärtkrämen och låt allt bli varmt.",
+      "Vänd ner pastan och smaka av med salt och peppar."
+    ]
+  },
+  {
+    "title": "Fläskfilé med rostad potatis och creamed corn",
+    "ingredients": [
+      "fläskfilé",
+      "potatis",
+      "majs",
+      "grädde",
+      "smör",
+      "vitlök",
+      "salt",
+      "svartpeppar"
+    ],
+    "instructions": [
+      "Sätt ugnen på 225°C.",
+      "Dela potatisen i klyftor och rosta i ugnen med olja och salt i ca 30 minuter.",
+      "Stek fläskfilén hel eller i skivor tills den är genomstekt.",
+      "Smält smör i en kastrull och tillsätt vitlök och majs.",
+      "Häll i grädde och låt sjuda tills krämigt.",
+      "Servera fläskfilén med rostad potatis och creamed corn."
+    ]
+  },
+  {
+    "title": "Citron- och timjanfrikadeller",
+    "ingredients": [
+      "blandfärs",
+      "citron",
+      "färsk timjan",
+      "ägg",
+      "ströbröd",
+      "mjölk",
+      "salt",
+      "peppar"
+    ],
+    "instructions": [
+      "Blanda ströbröd och mjölk och låt svälla.",
+      "Tillsätt färs, ägg, citronskal, timjan, salt och peppar.",
+      "Forma små frikadeller.",
+      "Stek frikadellerna i smör tills de är genomstekta.",
+      "Servera med pasta eller potatis och valfri sås."
+    ]
+  },
+  {
+    "title": "Kycklinggryta med bacon och svamp",
+    "ingredients": [
+      "kycklinglårfilé",
+      "bacon",
+      "champinjoner",
+      "gul lök",
+      "grädde",
+      "kycklingbuljong",
+      "salt",
+      "peppar"
+    ],
+    "instructions": [
+      "Skär bacon i bitar och stek knaprigt.",
+      "Tillsätt hackad lök och skivad svamp och stek tills mjukt.",
+      "Lägg i kycklingen och bryn runt om.",
+      "Häll på grädde och buljong.",
+      "Låt grytan sjuda i ca 15 minuter.",
+      "Smaka av med salt och peppar och servera med ris."
+    ]
+  },
+  {
+    "title": "Kyckling med rostad paprika- och fetakräm",
+    "ingredients": [
+      "kycklingfilé",
+      "röd paprika",
+      "fetaost",
+      "crème fraiche",
+      "vitlök",
+      "olivolja",
+      "salt",
+      "peppar"
+    ],
+    "instructions": [
+      "Rosta paprikan i ugnen tills skalet blir mörkt.",
+      "Mixa paprikan med fetaost, crème fraiche och vitlök.",
+      "Stek kycklingen i olivolja tills genomstekt.",
+      "Värm paprikakrämen försiktigt i kastrull.",
+      "Servera kycklingen med såsen och potatis eller ris."
+    ]
+  },
+
+  {
+    "title": "Tikka Masala",
+    "ingredients": [
+      "kyckling",
+      "gul lök",
+      "vitlök",
+      "ingefära",
+      "krossade tomater",
+      "grädde",
+      "garam masala",
+      "paprikapulver",
+      "olja",
+      "salt"
+    ],
+    "instructions": [
+      "Skär kycklingen i bitar.",
+      "Stek lök, vitlök och ingefära i olja tills mjukt.",
+      "Tillsätt kryddor och fräs kort.",
+      "Lägg i kycklingen och bryn runt om.",
+      "Häll i krossade tomater och låt sjuda 15 minuter.",
+      "Tillsätt grädde och servera med ris."
+    ]
+  },
+
+  {
+    "title": "Makaronilåda",
+    "ingredients": [
+      "makaroner",
+      "bacon",
+      "purjolök",
+      "ägg",
+      "mjölk",
+      "ost",
+      "salt",
+      "peppar"
+    ],
+    "instructions": [
+      "Koka makaronerna enligt anvisningarna.",
+      "Stek bacon och purjolök.",
+      "Blanda makaroner med baconblandningen.",
+      "Vispa ihop ägg och mjölk och krydda.",
+      "Häll allt i en ugnsform och toppa med ost.",
+      "Grädda i 200°C i ca 30 minuter."
+    ]
+  },
+
+  {
+    "title": "Äppelpaj med smuldeg",
+    "ingredients": [
+      "äpplen",
+      "socker",
+      "kanel",
+      "vetemjöl",
+      "smör",
+      "havregryn"
+    ],
+    "instructions": [
+      "Sätt ugnen på 200°C.",
+      "Skala och skiva äpplena och lägg i en pajform.",
+      "Strö över socker och kanel.",
+      "Blanda mjöl, havregryn och smör till smulor.",
+      "Fördela smulet över äpplena.",
+      "Grädda i ugnen i ca 30 minuter."
+    ]
   }
 ]
