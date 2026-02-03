@@ -1,5 +1,10 @@
 import Image from 'next/image'
-import {Recipe} from '@/app/types/recipe';
+export interface Recipe {
+  title: string;
+  image: string;
+  ingredients: string[];
+  instructions: string[];
+}
 
 interface Props {
     key: number;
@@ -10,9 +15,7 @@ export default function RecipeCard({key, recipe}: Props) {
     return (
         <>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            
-
-                <Image
+                 <Image
                     src="/images/chicken.jpg"
                     width={500}
                     height={500}
