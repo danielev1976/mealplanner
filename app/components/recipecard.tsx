@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import {Recipe} from '@/app/types/recipe';
-import Link from 'next/link';
 
 interface Props {
     key: number;
