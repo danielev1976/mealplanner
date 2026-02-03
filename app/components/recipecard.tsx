@@ -11,7 +11,7 @@ export default function RecipeCard({key, recipe}: Props) {
     return (
         <>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <Link href={`/recipes/${key}`}>
+            
 
                 <Image
                     src="/images/chicken.jpg"
@@ -19,7 +19,7 @@ export default function RecipeCard({key, recipe}: Props) {
                     height={500}
                     alt="Picture of the author"
                 />  
-                 </Link>
+             
                 <div className="px-6 py-4">
                     
                     <div className="font-bold text-xl mb-2">{recipe.title}</div>
