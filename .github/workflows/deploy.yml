@@ -21,6 +21,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+
       # Upload app files to the VPS
       - name: Deploy files to Strato VPS
         uses: appleboy/scp-action@v0.1.7
