@@ -10,8 +10,8 @@ export default function Recipes() {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {(recipes as Recipe[]).map(recipe => (
-          <RecipeCard {...recipe} />
+        {(recipes as Recipe[]).map((recipe, index) => (
+          <RecipeCard key={index} recipe={recipe} />
         ))}
       </div>
     </main>

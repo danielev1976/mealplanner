@@ -14,7 +14,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '25.1.0'
+          node-version: '22.x.0'
 
       - name: Install dependencies
         run: npm install
@@ -29,5 +29,9 @@ jobs:
           username: ${{ secrets.STRATO_USERNAME }}
           key: ${{ secrets.STRATO_SSH_KEY }}
           port: 22
-          source: '.next/**'
-          target: '/'  # Adjust the remote directory as needed
+          source: |
+            .next/**
+            public/**
+            package.json
+            next.config.js
+          target: '/var/www/nextjs'

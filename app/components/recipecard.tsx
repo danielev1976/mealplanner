@@ -1,20 +1,29 @@
 import Image from 'next/image'
 import {Recipe} from '@/app/types/recipe';
+import Link from 'next/link';
 
-
-export default function RecipeCard(recipe: Recipe) {
+interface Props {
+    key: number;
+  recipe: Recipe;
+}
+export default function RecipeCard({key, recipe}: Props) {
 
     return (
         <>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                <Link href={`/recipes/${key}`}>
+
                 <Image
                     src="/images/chicken.jpg"
                     width={500}
                     height={500}
                     alt="Picture of the author"
-                />  <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{recipe.title}</div>
+                />  
+                 </Link>
+                <div className="px-6 py-4">
                     
+                    <div className="font-bold text-xl mb-2">{recipe.title}</div>
+               
                 </div>
                <div className="p-4">
      
