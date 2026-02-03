@@ -9,20 +9,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '22.x.0'
+          node-version: '22'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
-
-      - name: Deploy to Strato
+      # Upload app files to the VPS
+      - name: Deploy files to Strato VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.STRATO_SERVER }}
@@ -34,4 +34,18 @@ jobs:
             public/**
             package.json
             next.config.js
-          target: '/var/www/nextjs'
+          target: /var/www/nextjs
+
+      # Install prod deps + restart app
+      - name: Install deps & restart app
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.STRATO_SERVER }}
+          username: ${{ secrets.STRATO_USERNAME }}
+          key: ${{ secrets.STRATO_SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/nextjs
+            npm install --production
+            pm2 restart nextjs || pm2 start npm --name nextjs -- start
+            pm2 save
