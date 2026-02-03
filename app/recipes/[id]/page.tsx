@@ -6,7 +6,7 @@ export default async function RecipePage({
   const { id } = await params;
 
   return (
-    <main style={{ padding: '2rem' }}>
+    <main className="max-w-7xl mx-auto px-6 py-10">
       <h1>Recipe Details</h1>
       <p>Displaying recipe for ID: <strong>{id}</strong></p>
       
