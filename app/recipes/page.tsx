@@ -1,8 +1,13 @@
 import RecipeCard from "@/app/components/recipecard";
 import recipes from "@/data/recipes.json";
-import { Recipe } from "@/app/types/recipe";
 
 export default function Recipes() {
+  interface Recipe {
+    title: string;
+    image: string;
+    ingredients: string[];
+    instructions: string[];
+  }
   return (
     <main className="max-w-7xl mx-auto px-6 py-10">
       <h1 className="text-3xl font-bold mb-8">
