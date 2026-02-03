@@ -31,11 +31,7 @@ jobs:
           username: ${{ secrets.STRATO_USERNAME }}
           key: ${{ secrets.STRATO_SSH_KEY }}
           port: 22
-          source: |
-            .next
-            public
-            package.json
-            next.config.js
+          source: ".next,package.json,package-lock.json,public,next.config.js"
           target: /var/www/nextjs
 
       # Install prod deps + restart app
