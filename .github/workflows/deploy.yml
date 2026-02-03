@@ -32,8 +32,8 @@ jobs:
           key: ${{ secrets.STRATO_SSH_KEY }}
           port: 22
           source: |
-            .next/**
-            public/**
+            .next
+            public
             package.json
             next.config.js
           target: /var/www/nextjs
