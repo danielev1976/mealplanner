@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 export interface Recipe {
   title: string;
   image: string;
@@ -13,15 +14,15 @@ interface Props {
 export default function RecipeCard({key, recipe}: Props) {
 
     return (
-        <>
+        <Link href={`/recipes/${key}`} className="max-w-sm rounded overflow-hidden shadow-lg">
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
                  <Image
                     src="/images/chicken.jpg"
-                    width={500}
-                    height={500}
+                    width={300}
+                    height={300}
                     alt="Picture of the author"
                 />  
-             
+            
                 <div className="px-6 py-4">
                     
                     <div className="font-bold text-xl mb-2">{recipe.title}</div>
@@ -35,14 +36,9 @@ export default function RecipeCard({key, recipe}: Props) {
 
         <span className="text-sm text-gray-300 font-medium">
           
-          <ol>
-            {recipe.instructions.map((step, index) => (
-              <li className='mb-3' key={index}>{step}</li>
-            ))}
-          </ol>
         </span>
       </div>
             </div>
-        </>
+        </Link>
     )
 }
